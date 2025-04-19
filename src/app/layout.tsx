@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import Providers from "./Providers";
 import "./globals.css";
 
@@ -15,7 +16,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Providers>
-          {/* <Navbar /> */}
+          <Navbar />
           <div className="container mx-auto">{children}</div>
         </Providers>
       </body>
