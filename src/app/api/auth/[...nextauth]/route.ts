@@ -1,5 +1,5 @@
-import { connectDB } from "@/app/libs/mongodb";
-import User from "@/app/models/user";
+import { connectDB } from "@/libs/mongodb";
+import User from "@/models/user";
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
@@ -10,7 +10,7 @@ const handler = NextAuth({
       name: "Credentials",
       id: "credentials",
       credentials: {
-        email: { label: "Email", type: "text", placeholder: "jsmith" },
+        email: { label: "Email", type: "email", placeholder: "jsmith@email.com" },
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
